@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+img{border: 0;}
+ul{list-style: none;}
+
+body{
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+p{
+    margin: 10px 0;
+}

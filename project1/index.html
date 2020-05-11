@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Beats Records</title>
+    <!-- 슬라이드 -->
+    <!--/*https://ryulog.tistory.com/151*/ 참고-->
+    <link href="./css/carousel.css" rel="stylesheet">
+    <script src="./js/carousel.min.js"></script>
+    <!-- 플로팅 라이트 바 -->
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.scrollfollow.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#banner").scrollFollow({
+                speed : 800,    // 무빙 속도
+                offset : 80     // 웹페이지 상단에서 부터의 거리
+            });
+          
+            
+            $(".btm_image").click(function(){
+                var temp = $.trim(   $(this).html()  ) ;
+                if(temp=='<img src="img/aside/star.jpg" title="아이유 팬맺기" width="14" height="14">'){
+                    $(this).html('<img src="img/aside/star_off.jpg" title="아이유 팬맺기" width="14" height="14">');
+                }
+                else{
+                    $(this).html('<img src="img/aside/star.jpg" title="아이유 팬맺기" width="14" height="14">');
+                }
+            });
+            $(".btm_image1").click(function(){
+                var temp = $.trim(   $(this).html()  ) ;
+                if(temp=='<img src="img/aside/star.jpg" title="아이유 팬맺기" width="14" height="14">'){
+                    $(this).html('<img src="img/aside/star_off.jpg" title="아이유 팬맺기" width="14" height="14">');
+                }
+                else{
+                    $(this).html('<img src="img/aside/star.jpg" title="아이유 팬맺기" width="14" height="14">');
+                }
+            });
+        });
+    </script>
+    
+    <!-- 초기화 -->
+    <style>
+        *{margin:0; padding:0; box-sizing: border-box;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+        img{border:0;}
+        body{
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        #main_header{
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .content{
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #main_footer{
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .footer_wrap{
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #side_banner{
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+    </style>
+
+    <!-- 플로팅 라이트 바 -->
+    <style>
+        /* 플로팅 */
+        #banner{
+            position: absolute;
+            right: -200px;
+            width: 150px;
+        }
+        #banner > .side_title{
+            text-align: center;
+            color: #344072;
+            font-size: 10px;
+            margin-bottom: 15px;
+        }
+        #banner > .side_item{
+            width: 150px;
+            height: 175px;
+            margin-bottom: 5px;
+        }
+        #banner > .side_item:last-child{
+            margin-bottom: 300px;
+        }
+    </style>
+
+    <!-- header -->
+    <style>
+        #main_logo{text-align: center;}
+        #main_search{
+            overflow: hidden;
+            left: 865px; top: 15px;
+            position: absolute;
+        }
+        input {
+            /* -webkit-writing-mode: horizontal-tb !important; */
+            display: inline-block;
+            -webkit-appearance: textfield;
+            -webkit-rtl-ordering: logical;
+            cursor: text;
+            font: 400 13.3333px Arial;
+            padding: 1px 0px;
+            border-width: 2px;
+            border-style: inset;
+        }
+        .keyword {
+            width: 200px;
+            height: 32px;
+        }
+        .ePlaceholder {
+            width: 250px;
+            height: 32px;
+        }
+        .btn_submit{
+            border-style: none;
+            cursor:pointer;
+        }
+        #main_categori{
+            overflow: hidden;
+            border-bottom: 3px solid black;
+        }
+        #main_categori>.left{
+            float: left;
+            line-height: 41px;
+        }
+        #main_categori>.right{float: right;}
+        #main_categori>.right>li{
+            position: relative;
+            float: left;
+            padding: 10px;
+        }
+        #main_categori>.right>li::before{
+            display: block;
+            position: absolute;
+            top: 15px; right: 0px;
+            height: 15px;
+            border-right: 1px solid black;
+            content: '';
+        }
+        #main_categori>.right>li:last-child::before{
+            border-right: 0px solid black;
+        }
+        /* 카테고리 토글부분 */
+        #toggle{display: none;}
+        .categori_toggle{
+            position: absolute;
+            z-index: 99;
+            background-color: white;
+            border: 1px solid black;
+            border-top: 0px;
+        }
+        #toggle ~ .categori_toggle{display: none;}
+        #toggle:checked ~ .categori_toggle{
+            display: block;
+        }
+        .categori_toggle>ul{
+            overflow: hidden;
+        }
+        .categori_toggle>ul>li{
+            float: left;
+            padding: 20px;
+        }
+    </style>
+
+    <!-- content -->
+    <style>
+        .content{
+            width: 1100px;
+            overflow: hidden;
+            margin-top: 10px;
+            position: relative;
+        }
+        .content > #section{
+            width: 750px;
+            float: left;
+            margin: 0 auto;;
+            overflow-x: hidden;
+        }
+        .content > #aside{
+            width: 350px;
+            float: right;
+        }
+        .horizontal{
+            height:2px;
+            background-color:gainsboro
+        }
+    </style>
+    
+    <!-- section -->
+    <style>
+        #carousel-banner {
+            width: 750px;
+            height:400px;
+        }
+        .album_out_layout{
+            overflow:hidden;
+        }
+        .album_in_layout{
+            margin : 5px 0;
+        }
+        .album_in_layout >.album{
+            float:left;
+            width:365px;
+            height:200px;
+            margin:4px 10px 4px 0px;
+        }
+        .album > .img_layout{
+            float:left;
+            width:160px;
+            height:200px;
+        }
+        .album > .album_textbox{
+            float:left;
+            height:200px;
+            width:205px;
+        }
+        .album_textbox > .textbox_info{
+            margin:2px 5px;
+            height: 45px;
+            color:#2f2f2f;
+            font-size:20px;  
+        }
+        .textbox_info > span {
+            display: block;
+            margin-bottom: -2px;
+            color: #888;
+            font-weight: 600;
+            font-size: 14px;
+            font-family: "돋움", Dotum;
+        }
+        .textbox_info > p {
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .album_textbox > .textbox_singername{
+            height:20px;
+            margin:2px 5px;
+        }
+        .album_textbox > .textbox_singername > a{
+            color:#7cb710;
+            font-size:15px;
+        }
+        .album_textbox > .textbox_meta{
+            margin-left:5px;
+            height: 100px;
+            width:205px;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .textbox_meta > dt{
+            float: left;
+            width: 60px;
+            padding-top: 6px;
+            color: #888888;
+            font-size: 13px;
+        }
+        .textbox_meta > dd {
+            padding-top: 6px;
+            color: #606060;
+            font-size: 13px;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .list_button {
+            overflow: hidden;
+            width: 406px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .list_button > .page {
+            float: left;
+            width: 34px;
+            height: 34px;
+            background: url(./img/section/sprite.png);
+        }
+        .list_button > .page:last-child{
+            width: 66px;
+        }
+        .list_button > div.list1{background-position: 0 0;}
+        .list_button > div.list2{background-position: -34px 0;}
+        .list_button > div.list3{background-position: -68px 0;}
+        .list_button > div.list4{background-position: -102px 0;}
+        .list_button > div.list5{background-position: -136px 0;}
+        .list_button > div.list6{background-position: -170px 0;}
+        .list_button > div.list7{background-position: -204px 0;}
+        .list_button > div.list8{background-position: -238px 0;}
+        .list_button > div.list9{background-position: -272px 0;}
+        .list_button > div.list10{background-position: -306px 0;}
+        .list_button > div.list11{background-position: -340px 0;}
+
+        .list_button > div.list1:active{background-position: 0 34px;}
+        .list_button > div.list2:active{background-position: -34px 34px;}
+        .list_button > div.list3:active{background-position: -68px 34px;}
+        .list_button > div.list4:active{background-position: -102px 34px;}
+        .list_button > div.list5:active{background-position: -136px 34px;}
+        .list_button > div.list6:active{background-position: -170px 34px;}
+        .list_button > div.list7:active{background-position: -204px 34px;}
+        .list_button > div.list8:active{background-position: -238px 34px;}
+        .list_button > div.list9:active{background-position: -272px 34px;}
+        .list_button > div.list10:active{background-position: -306px 34px;}
+    </style>
+
+    <!-- aside -->
+    <style>
+        /* aside item */
+        .item{
+            overflow: hidden;
+            margin: 0 24px;
+        }
+        .description{
+            width:300px;
+            overflow:hidden;
+            border-bottom: 1px solid lightgray;
+            border-left: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+        }
+        /* aside 차트 */
+        .description > ul{
+            overflow: hidden;
+        }
+        .description > ul > li{
+            float: left;
+            padding: 8px 0;
+            /*border-color:black;*/
+        }
+        .description > ul > li.numb1{
+            width: 70px;
+            border-width: 1px;
+            /*border-color: transparent transparent transparent transparent;*/
+            font-size:25px;  
+            padding:25.5px 0;
+        }
+        .description > ul > li.song1{
+            width: 230px;
+            white-space: nowrap;
+            overflow: hidden;   
+            text-overflow: ellipsis;
+            font-size:14px;            
+        }
+        .singer1{
+            color: grey;
+            white-space: nowrap;
+            overflow: hidden;   
+            text-overflow: ellipsis;
+            font-size:14px;           
+        }
+
+        .description > ul > li.numb{
+            width: 70px;
+            font-size:13px;  
+        }
+        .description > ul > li.song{
+            width: 135px;
+            white-space: nowrap;
+            overflow: hidden;   
+            text-overflow: ellipsis;
+            font-size:13px;            
+        }
+        .description > ul > li.singer{
+            width: 95px;
+            color: grey;
+            white-space: nowrap;
+            overflow: hidden;   
+            text-overflow: ellipsis;
+            font-size:13px;            
+        }
+        
+        .description > .melon_line > li.singer > .btm_image{
+            float: right;
+            margin-right: 20px;
+            border-style: none;
+            background: none;
+    }
+         button.btm_image1{
+            float: right;
+            margin-top:3px;
+            border-style: none;
+            background: none;
+    }
+
+                    
+        ul.melon_line{width: 300px;}
+        .description > ul.even{background-color: rgb(230, 227, 227);}
+        .thumbnail{float:left;}
+        .description1{
+            float: left;
+            margin-left: 10px;
+            margin-top: 12px;
+        }
+        .description2{
+            float: left;
+            margin-left: 10px;
+            margin-top: 25px;
+            overflow:hidden;
+        }
+        /* aside 차트 버튼 */
+        input.melon1{display:none;}
+        input.melon1 ~ div.melon_content1{display:none;}
+        input.melon1:checked ~ div.melon_content1{display:block;} 
+
+        input.melon2{display:none;}
+        input.melon2 ~ div.melon_content2{display:none;}
+        input.melon2:checked ~ div.melon_content2{display:block;} 
+
+        input.melon3{display:none;}
+        input.melon3 ~ div.melon_content3{display:none;}
+        input.melon3:checked ~ div.melon_content3{display:block;} 
+
+        section.buttons{
+            overflow:hidden;
+        }
+        section.buttons > label{
+            display: block; float: left;
+            width: 100px; height: 30px;
+            line-height: 20px;
+            font-size: 14px;
+            border-top: 1px solid lightgray;
+            border-left: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            color: grey;
+            font-weight: bold;
+            padding-top: 3.25px;
+            text-align: center;
+        }
+        input.melon1:checked ~ section.buttons > label.melon_label1{
+            color: yellowgreen;
+            padding-top: 2.25px;
+            border-top: 2px solid yellowgreen;
+        }
+        input.melon2:checked ~ section.buttons > label.melon_label2{
+            color: yellowgreen;
+            padding-top: 2.25px;
+            border-top: 2px solid yellowgreen;
+        }
+        input.melon3:checked ~ section.buttons > label.melon_label3{
+            color: yellowgreen;
+            padding-top: 2.25px;
+            border-top: 2px solid yellowgreen;
+        }
+
+        /* 그래프 내부 스타일 */
+        div#tooltip{
+            text-align: center;
+            font-size: 13px;
+            width: 165px;
+            height: 25px;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        div.legend{
+            font-size: 14px;
+        }
+
+        /* aside 내용글 */
+        #aside > form.aside_content{
+            margin: 50px 25px;
+            font-size: 13px;
+            float: left;
+        }
+        li.aside_menu{
+            margin: 10px 0 10px 10px;
+        }
+        .nina_a{
+            color: #333;
+        }
+    </style>
+
+    <!-- footer -->
+    <style>
+        #main_footer {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        #main_footer > .footer1 {float: left;}
+        #main_footer > .footer2 {
+            float: left;
+            width: 900px;
+        }
+        #footersize1 {
+            padding-top: 5px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }   
+        #footersize1 > span {
+            display: inline-block;
+            margin: 10px;
+        }
+        #footersize2 {
+            margin-left: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        #copy_footer {
+            height: 50px;
+            line-height: 50px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: whitesmoke;
+            overflow: hidden;
+        }
+        #blank {
+            width: 200px;
+            height: 50px;
+            background-color: whitesmoke;
+            float: left;
+        }
+        #footersize3 {
+            width: 900px;
+            padding-left: 10px;
+            font-size: 14px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="side_banner">
+        <div id="banner">
+            <div class="side_title">
+                <h1 style="border: 2px solid black;">THE HOT 100</h1>
+            </div>
+            <img src="img/aside/sellalbum.png" class="side_item">
+            <img src="img/aside/albumsong.png" class="side_item">
+            <img src="img/aside/mostview.png" class="side_item">
+            <img src="img/aside/global.png" class="side_item">
+        </div>
+    </div>
+
+    <!-- header 부분 시작 -->
+    <div id="main_header">
+        <input type="checkbox" name="" id="toggle">
+        <header id="main_logo">
+            <a href="#"><img src=./img/header/logo.png width="200px" height="150px"></a>
+        </header>
+        <nav id="main_search">
+            <input type="text" class="keyword" placeholder="search" />
+            <input type="image" src="img/aside/btn_search.jpg" style="width: 35px; height: 32px; float:right;" value="" class="btn_submit" />
+        </nav>
+        <nav id="main_categori">
+            <ul class="left">
+                <li><label class="main_toggle" for="toggle"><h3>Categori</h3></label></li>
+            </ul>
+            <ul class="right">
+                <li><a href="./login.html">로그인</a></li>
+                <li><a href="./join.html">회원가입</a></li>
+                <li><a href="./cart.html">장바구니</a></li>
+                <li><a href="#">주문조회</a></li>
+                <li><a href="#">중고거래</a></li>
+            </ul>
+        </nav>
+        <div class="categori_toggle">
+            <ul>
+                <li><a href="#">Kpop</a></li>
+                <li><a href="#">Pop</a></li>
+                <li><a href="#">Hiphop</a></li>
+                <li><a href="#">R&B Soul</a></li>
+                <li><a href="#">Rock</a></li>
+                <li><a href="#">Jazz</a></li>
+                <li><a href="#">Classic</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- content 부분 시작 -->
+    <div class="content"> 
+        <section id="section">
+            <div id="containter">
+                <div class="carousel" id="carousel-banner">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-item">
+                            <img src="./img/section/slide/anysong_slide.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/section/slide/bangtan_slide.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/section/slide/ceremonia_slide.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/section/slide/yeetaewon_slide.jpg">
+                        </div>
+                    </div>
+                <div class="navi-wrapper"></div>
+                </div>
+            </div>
+            <script>
+                new Carousel(document.querySelector('#carousel-banner'), {
+                CarouselMotion: 'default',
+                naviPosition: 'bottom',
+                naviStyle: 'dot',
+                autoMove: true,
+                autoMoveTime: 2000
+            });
+            </script>
+            <div class="album_out_layout">
+                <div class="album_in_layout">
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/1.png" alt="델모">
+                        </div>
+                        <div class="album_textbox" >
+                            <div class="textbox_info">
+                                <span>[싱글]</span>
+                                <p>갓</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">Delmo</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt>
+                                <dd>2020.03.26</dd>
+                                <dt>장르</dt>
+                                <dd>랩/힙합</dd>
+                                <dt>발매사</dt>
+                                <dd>지니뮤직, Stone Music Entertainment</dd>
+                                <dt>기획사</dt>
+                                <dd>뮤턴트레이블</dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/2.png" alt="옹성우">
+                        </div>
+                        <div class="album_textbox">
+                            <div class="textbox_info">
+                                <span>[EP]</span>
+                                <p>옹성우 1st Mini Album [LAYERS]</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">옹성우</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt>
+                                <dd>2020.03.25</dd>
+                                <dt>장르</dt>
+                                <dd>댄스,R&B/Soul,발라드</dd>
+                                <dt>발매사</dt>
+                                <dd>(주) 카카오M</dd>
+                                <dt>기획사</dt>
+                                <dd>주식회사 판타지오</dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/3.png" alt="엠씨더맥스">
+                        </div>
+                        <div class="album_textbox">
+                            <div class="textbox_info">
+                                <span>[싱글]</span>
+                                <p>CEREMONIA</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">엠씨더맥스 (M.C the MAX)</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt>
+                                <dd>2020.03.25</dd>
+                                <dt>장르</dt>
+                                <dd>발라드</dd>
+                                <dt>발매사</dt>
+                                <dd>(주) 카카오M</dd>
+                                <dt>기획사</dt>
+                                <dd>325 이엔씨</dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/4.png" alt="">
+                        </div>
+                        <div class="album_textbox">
+                            <div class="textbox_info">
+                                <span>[싱글]</span>
+                                <p>Mixtape : 바보라도 알아</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">Stray Kids (스트레이 키즈)</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt>
+                                <dd>2020.03.25</dd>
+                                <dt>장르</dt>
+                                <dd>랩/힙합</dd>
+                                <dt>발매사</dt>
+                                <dd>Dreamus</dd>
+                                <dt>기획사</dt>
+                                <dd>(주)JYP엔터테인먼트</dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/5.png" alt="">
+                        </div>
+                        <div class="album_textbox">
+                            <div class="textbox_info">
+                                <span>[정규]</span>
+                                <p>고강동</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">박소은</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt>
+                                <dd>2020.03.26</dd>
+                                <dt>장르</dt>
+                                <dd>인디음악, 록/메탈</dd>
+                                <dt>발매사</dt>
+                                <dd>Mirrorball Music(미러볼 뮤직)</dd>
+                                <dt>기획사</dt>
+                                <dd>withHC, pondsound</dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/6.png" alt="">
+                        </div>
+                        <div class="album_textbox">
+                            <div class="textbox_info">
+                                <span>[싱글]</span>
+                                <p>Party (Feat, 이영지)</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">LuVan (루반)</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt> <dd>2020.03.26</dd>
+                                <dt>장르</dt> <dd>랩/힙합, 인디음악</dd>
+                                <dt>발매사</dt> <dd>(주)오감엔터테인먼트</dd>
+                                <dt>기획사</dt> <dd>Luvaninthehouse</dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/7.png" alt="">
+                        </div>
+                        <div class="album_textbox">
+                            <div class="textbox_info">
+                                <span>[정규]</span>
+                                <p>MAP OF THE SOUL:7</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">BTS</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt> <dd>2020.02.21</dd>
+                                <dt>장르</dt> <dd>랩/힙합</dd>
+                                <dt>발매사</dt> <dd>Dreamus</dd>
+                                <dt>기획사</dt> <dd>빅히트엔터테인먼트</dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/8.png" alt="">
+                        </div>
+                        <div class="album_textbox">
+                            <div class="textbox_info">
+                                <span>[OST]</span>
+                                <p>이태원 클라쓰 OST Part.2</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">가호 (Gaho)</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt> <dd>2020.02.01</dd>
+                                <dt>장르</dt> <dd>국내드라마, 랩/메탈</dd>
+                                <dt>발매사</dt> <dd>주식회사 블렌딩</dd>
+                                <dt>기획사</dt> <dd>주식회사 블렌딩</dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/9.png" alt="">
+                        </div>
+                        <div class="album_textbox">
+                            <div class="textbox_info">
+                                <span>[싱글]</span>
+                                <p>아무노래</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">지코 (ZICO)</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt> <dd>2020.01.13</dd>
+                                <dt>장르</dt> <dd>랩/힙합</dd>
+                                <dt>발매사</dt> <dd>(주) 카카오 M</dd>
+                                <dt>기획사</dt> <dd>KOZ 엔터테인먼트</dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="img_layout">
+                            <img src="img/section/10.png" alt="">
+                        </div>
+                        <div class="album_textbox">
+                            <div class="textbox_info">
+                                <span>[OST]</span>
+                                <p>이태원 클라쓰 OST Part.1</p>
+                            </div>
+                            <div class="textbox_singername">
+                                <a href="#">하현우 (국카스텐)</a>
+                            </div>
+                            <div class="textbox_meta">
+                                <dt>발매일</dt> <dd>2020.01.31</dd>
+                                <dt>장르</dt> <dd>국내드라마, 룩/메탈</dd>
+                                <dt>발매사</dt> <dd>주식회사 블렌딩</dd>
+                                <dt>기획사</dt> <dd>주식회사 블렌딩</dd>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list_button">
+                <div class="page list1"></div>
+                <div class="page list2"></div>
+                <div class="page list3"></div>
+                <div class="page list4"></div>
+                <div class="page list5"></div>
+                <div class="page list6"></div>
+                <div class="page list7"></div>
+                <div class="page list8"></div>
+                <div class="page list9"></div>
+                <div class="page list10"></div>
+                <div class="page list11"></div>
+            </div>
+        </section>
+        
+        <aside id="aside">
+            <!-- 손준희 시작-->
+            <div class="tab_item">
+                <input class="melon1" type="radio" id="first" name="tab" checked="checked"/>
+                <input class="melon2" type="radio" id="second" name="tab"/>
+                <input class="melon3" type="radio" id="third" name="tab"/>
+                <section class="buttons">
+                    <label class="melon_label1" for="first" style="margin-left: 24px;">실시간</label>    
+                    <label class="melon_label2" for="second">POP</label>
+                    <label class="melon_label3" for="third" style="border-right: 1px solid lightgray;">☆아티스트</label>
+                </section>
+                <div class="melon_content1 tab_item">
+                    <ul>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb1" style="color:yellowgreen;"><strong><i style="margin-left: 16px;">1</i></strong></li>
+                                    <li class="song1">
+                                        <div class="thumbnail">
+                                            <img src="img/aside/first_cover.jpg" width="65" height="65">
+                                        </div>
+                                        <div class="description1">
+                                            <strong class="song1">시작</strong>
+                                            <p class="singer1">가호 (Gaho)</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:yellowgreen;"><strong><i style="margin-left: 16px;">2</i></strong></li>
+                                    <li class="song">처음처럼</li>
+                                    <li class="singer">엠씨더맥스 (M.C the MAX)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:yellowgreen;"><strong><i style="margin-left: 16px;">3</i></strong></li>
+                                    <li class="song">ON</li>
+                                    <li class="singer">방탄소년단</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">4</i></strong></li>
+                                    <li class="song">그때 그 아인</li>
+                                    <li class="singer">김필</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">5</i></strong></li>
+                                    <li class="song">아무노래</li>
+                                    <li class="singer">지코 (ZICO)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">6</i></strong></li>
+                                    <li class="song">돌덩이</li>
+                                    <li class="singer">하현우 (국카스텐)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">7</i></strong></li>
+                                    <li class="song">00:00 (Zero O'Clock)</li>
+                                    <li class="singer">방탄소년단</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">8</i></strong></li>
+                                    <li class="song">Black Swan</li>
+                                    <li class="singer">방탄소년단</li>
+                                </ul>
+                            </div>  
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">9</i></strong></li>
+                                    <li class="song">흔들리는 꽃들 속에서 네 샴푸향이 느껴진거야</li>
+                                    <li class="singer">장범준</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">10</i></strong></li>
+                                    <li class="song">마음을 드려요</li>
+                                    <li class="singer">아이유</li>
+                                </ul>
+                            </div>
+                        </li>                                                                              
+                    </ul> 
+                </div>
+                <div class="melon_content2 tab_item">
+                    <ul>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb1" style="color:yellowgreen;"><strong><i style="margin-left: 16px;">1</i></strong></li>
+                                    <li class="song1">
+                                        <div class="thumbnail">
+                                            <img src="img/aside/second_cover.jpg" width="65" height="65">
+                                        </div>
+                                        <div class="description1">
+                                            <strong class="song1">2002</strong>
+                                            <p class="singer1">Anne-Marie</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:yellowgreen;"><strong><i style="margin-left: 16px;">2</i></strong></li>
+                                    <li class="song">bad guy</li>
+                                    <li class="singer">Billie Eilish</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:yellowgreen;"><strong><i style="margin-left: 16px;">3</i></strong></li>
+                                    <li class="song">Maniac</li>
+                                    <li class="singer">Conan Gray</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">4</i></strong></li>
+                                    <li class="song">Paris In The Rain</li>
+                                    <li class="singer">Lauv</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">5</i></strong></li>
+                                    <li class="song">Birthday</li>
+                                    <li class="singer">Anne-Marie</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">6</i></strong></li>
+                                    <li class="song">To Die For</li>
+                                    <li class="singer">Sam Smith</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">7</i></strong></li>
+                                    <li class="song">Painkiller</li>
+                                    <li class="singer">Ruel</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">8</i></strong></li>
+                                    <li class="song">Señorita</li>
+                                    <li class="singer">Shawn Mendes, Camila Cabello</li>
+                                </ul>
+                            </div>  
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">9</i></strong></li>
+                                    <li class="song">ROXANNE</li>
+                                    <li class="singer">Arizona Zervas</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">10</i></strong></li>
+                                    <li class="song">comethru</li>
+                                    <li class="singer">Jeremy Zucker</li>
+                                </ul>
+                            </div>
+                        </li>                                                                              
+                    </ul> 
+                </div>
+                <div class="melon_content3 tab_item">
+                    <ul>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb1" style="color:yellowgreen;"><strong><i style="margin-left: 16px;">1</i></strong></li>
+                                    <li class="song1">
+                                        <div class="thumbnail">
+                                            <img src="img/aside/third_cover.jpg" width="65" height="65">
+                                        </div>
+                                        <div class="description2" style="width: 135px;">
+                                            <strong class="song1">방탄소년단</strong>
+                                            <button type="button" class="btm_image1" id="img_btn1">
+                                                <img src="img/aside/star_off.png" title="방탄소년단 팬맺기" width="14" height="14"/>
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:yellowgreen;"><strong><i style="margin-left: 16px;">2</i></strong></li>
+                                    <li class="song">아이유</li>
+                                    <li class="singer">
+                                        <button type="button" class="btm_image" id="img_btn2">
+                                            <img src="img/aside/star_off.jpg" title="아이유 팬맺기" width="14" height="14"/>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:yellowgreen;"><strong><i style="margin-left: 16px;">3</i></strong></li>
+                                    <li class="song">강다니엘</li>
+                                    <li class="singer">
+                                        <button type="button" class="btm_image" id="img_btn3">
+                                            <img src="img/aside/star_off.jpg" title="강다니엘 팬맺기" width="14" height="14"/>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">4</i></strong></li>
+                                    <li class="song">옹성우</li>
+                                    <li class="singer">
+                                        <button type="button" class="btm_image" id="img_btn4">
+                                            <img src="img/aside/star_off.jpg" title="옹성우 팬맺기" width="14" height="14"/>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">5</i></strong></li>
+                                    <li class="song">엠씨더맥스 (M.C the MAX)</li>
+                                    <li class="singer">
+                                        <button type="button" class="btm_image" id="img_btn5">
+                                            <img src="img/aside/star_off.jpg" title="엠씨더맥스 (M.C the MAX) 팬맺기" width="14" height="14"/>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">6</i></strong></li>
+                                    <li class="song">임영웅</li>
+                                    <li class="singer">
+                                        <button type="button" class="btm_image" id="img_btn6">
+                                            <img src="img/aside/star_off.jpg" title="임영웅 팬맺기" width="14" height="14"/>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">7</i></strong></li>
+                                    <li class="song">NCT 127</li>
+                                    <li class="singer">
+                                        <button type="button" class="btm_image" id="img_btn7">
+                                            <img src="img/aside/star_off.jpg" title="NCT 127 팬맺기" width="14" height="14"/>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">8</i></strong></li>
+                                    <li class="song">송가인</li>
+                                    <li class="singer">
+                                        <button type="button" class="btm_image" id="img_btn8">
+                                            <img src="img/aside/star_off.jpg" title="송가인 팬맺기" width="14" height="14"/>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>  
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">9</i></strong></li>
+                                    <li class="song">가호 (Gaho)</li>
+                                    <li class="singer">
+                                        <button type="button" class="btm_image" id="img_btn9"><img src="img/aside/star_off.jpg" title="가호 (Gaho) 팬맺기" width="14" height="14"/></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="description">
+                                <ul class="melon_line even">
+                                    <li class="numb" style="color:gray;"><strong><i style="margin-left: 16px;">10</i></strong></li>
+                                    <li class="song">IZ*ONE (아이즈원)</li>
+                                    <li class="singer">
+                                        <button type="button" class="btm_image" id="img_btn10"><img src="img/aside/star_off.jpg" title="IZ*ONE (아이즈원) 팬맺기" width="14" height="14"/></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>                                                                              
+                    </ul> 
+                </div>
+            </div>
+            <div id="placeholder" style="width:300px;height:300px;margin: 15px 22.5px 0px 22.5px; position: relative;">
+                <script src="http://static.pureexample.com/js/flot/jquery.flot.min.js"></script>
+                <script>
+                $(function() {
+
+                    var d1 = [[1, 19], [2, 17], [3, 17], [4, 19], [5, 19], [6, 19], [7, 19], [8, 19], [9, 19], [10, 19]];
+                    var d2 = [[1, 18], [2, 16], [3, 15], [4, 12], [5, 17], [6, 18], [7, 18], [8, 18], [9, 18], [10, 18]];
+                    var d3 = [[1, 17], [2, 18], [3, 19], [4, 19], [5, 18], [6, 17], [7, 17], [8, 17], [9, 17], [10, 17]];
+                    var ticksData = [ [1, "1시"], [2, "2시"], [3, "3시"],[4, "4시"],[5, "5시"],[6, "6시"],[7, "7시"],[8, "8시"],[9, "9시"],[10, "10시"] ];
+                    var data = [
+                        {
+                            tag: "시작 - 가호 (Gaho)",
+                            label: "1위",
+                            data: d1
+                        },
+                        {
+                            tag: "처음처럼 - 엠씨더맥스 (M.C the MAX)",
+                            label: "2위",
+                            data: d2
+                        },
+                        {
+                            tag: "ON - 방탄소년단",
+                            label: "3위",
+                            data: d3
+                        }
+                    ]
+                    $.plot($("#placeholder"), data, {
+                        grid: {
+                            hoverable: true,
+                        
+                        },
+                        series: { 
+                            lines: {show: true},
+                            points:{show: true}
+                        },
+                        xaxis: {            
+                            ticks: ticksData,
+                            tickDecimals: 0,
+                        },
+                        yaxis:{
+                            min: 11.5, max: 21.5, ticks: 0, tickDecimals: 0
+                        },
+                        legend: {
+                            noColumns: 3
+                        }
+                    });
+                
+                    $("<div id='tooltip'></div>").css({
+                        position: "absolute",
+                        display: "none",
+                        padding: "2px",
+                        "background-color": "#d3e9a5",
+                        opacity: 0.80
+                    }).appendTo("body");
+                
+                    $("#placeholder").bind("plothover", function(event, pos, item) {
+                        if (item) {
+                            var x = item.datapoint[0], y = item.datapoint[1];
+                            var content = item.series.tag;
+                            
+                            $("#tooltip").html(content)
+                            .css({
+                                top: item.pageY - 25,
+                                left: item.pageX + 3,
+                            })
+                            .fadeIn(200);
+                        } else {
+                            $("#tooltip").hide();
+                        }
+                    });
+                });
+                </script> <!-- 그래프 끝 -->
+            </div>
+            <form class="aside_content">
+                <div class="product_search">
+                    <h3>전체 게시판</h3>
+                    <ul>
+                        <li class="aside_menu"><a href="#" class="nina_a"> 공지사항</a></li>
+                        <li class="aside_menu"><a href="#" class="nina_a"> 오디오장터</a></li>
+                        <li class="aside_menu"><a href="#" class="nina_a"> 자유게시판</a></li>
+                        <li class="aside_menu"><a href="#" class="nina_a"> 해외구매대행</a></li>
+                        <li class="aside_menu"><a href="#" class="nina_a"> 상품자유게시판</a></li>
+                        <li class="aside_menu"><a href="customer_support.html" class="nina_a"> 고객지원센터</a></li>
+                        <li class="aside_menu"><a href="#" class="nina_a"> 입고요청</a></li>
+                        <li class="aside_menu"><a href="#" class="nina_a"> 음반매입 게시판</a></li>
+                        <li class="aside_menu"><a href="#" class="nina_a"> 무료음반</a></li>
+                        <li class="aside_menu"><a href="#" class="nina_a"> 사진방</a></li>
+                    </ul>
+                </div>
+            </form>
+        </aside>
+    </div>
+    <div class="horizontal"></div> <!-- 수평선 -->
+    <!-- footer 부분 시작 -->
+    <footer>
+        <div id="main_footer"> 
+            <div class="footer1"><img src="./img/header/logo.png" width="200px" height="150px"></div>
+            <div class="footer2">
+                <p id="footersize1">
+                    <span>법인명(상호): 원비트레코즈</span>
+                    <span>대표자(성명):박명회</span>
+                    <span>사업자 등록번호 안내 : [502-28-85800]</span>
+                    <span>통신판매업 신고 제 2013-대구수성구-99</span><br>
+                    <span>전화 : 053-751-7755</span>
+                    <span>주소 : 412-28 대구광역시 동부로 121</span><br />
+                    <span>개인정보보호책임자 : 안형락(053-751-7755)</span>
+                </p>
+                <p id="footersize2">    
+                    <span>Contact <b>onebeatsr@gmail.com</b> for morre information.</span>
+                </p>
+            </div>
+        </div>
+        <div id="copy_footer">
+            <div class="footer_wrap">
+                <div id=blank></div> <!-- 200px 빈공간-->
+                <div id="footersize3">
+                    Copyright <b>ⓒ원비트레코즈</b> All rights reserved
+                </div>
+            </div>
+        </div>  
+    </footer>
+</body>
+</html>

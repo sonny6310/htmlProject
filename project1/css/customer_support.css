@@ -1,0 +1,340 @@
+*{margin: 0; padding: 0; }
+a{ text-decoration: none;}
+img{border: 0;}
+ul{ list-style: none;}
+
+body{
+    width: 1100px;
+    
+    margin: 0 auto;
+    /* background-color: whitesmoke; */
+    
+    /* position: relative; */
+    
+}
+#main_board{
+    line-height: 200px;
+    border-bottom: 2px solid black;
+    
+}
+#main_board>.img_board{
+    width: 500px;
+    height: 200px;
+    float: right;
+}
+#sub_board{
+    overflow: hidden;
+    border-bottom: 2px solid black;
+}
+body> #sub_board>.div1{
+    float: left;
+    padding: 10px;
+    margin-left: 40px;
+}
+body> #sub_board>.div2{
+    float: left;
+    padding: 10px;
+    margin-left: 40px;
+}
+body> #sub_board>.div2.active{
+    background-color: #c8c8c8;
+}
+body> #sub_board>.div3{
+    float: left;
+    padding: 10px;
+    margin-left: 40px;
+}
+body> #sub_board>.div4{
+    padding: 10px;
+    float: left;
+    margin-left: 40px;
+}
+body > #No_board{
+    overflow: hidden;
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+body> #No_board>.divdiv1{
+    float: left;
+    
+    margin-left: 35px;
+
+}
+body> #No_board>.divdiv2{
+    float: left;
+    
+    margin-left: 400px;
+    
+}
+body> #No_board>.divdiv3{
+    float: left;
+    
+    margin-left: 380px;
+}
+body> #No_board>.divdiv4{
+    
+    float: left;
+    margin-left: 80px;
+}
+body> #board_number1{
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px;
+}
+body> #board_number1>.board1_1{
+    float: left;
+    margin-left: 40px;
+}
+body> #board_number1>.board1_2{
+    float: left;
+    margin-left: 100px;
+}
+body> #board_number1>.board1_3{
+    float: left;
+    margin-left: 450px;
+}
+body> #board_number1>.board1_4{
+    float: left;
+    margin-left: 70px;
+}
+body> #board_number2{
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px;
+}
+body> #board_number2>.board2_1{
+    float: left;
+    margin-left: 44px;
+}
+body> #board_number2>.board2_2{
+    float: left;
+    margin-left: 104px;
+}
+body> #board_number2>.board2_3{
+    float: left;
+    margin-left: 414px;
+}
+body> #board_number2>.board2_4{
+    float: left;
+    margin-left: 70px;
+}
+body> #board_number3{
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px;
+}
+body> #board_number3>.board3_1{
+    float: left;
+    margin-left: 44px;
+}
+body> #board_number3>.board3_2{
+    float: left;
+    margin-left: 104px;
+}
+body> #board_number3>.board3_3{
+    float: left;
+    margin-left: 476px;
+}
+body> #board_number3>.board3_4{
+    float: left;
+    margin-left: 70px;
+}
+body> #board_number4{
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px;
+}
+body> #board_number4>.board4_1{
+    float: left;
+    margin-left: 44px;
+}
+body> #board_number4>.board4_2{
+    float: left;
+    margin-left: 104px;
+}
+body> #board_number4>.board4_3{
+    float: left;
+    margin-left: 496px;
+}
+body> #board_number4>.board4_4{
+    float: left;
+    margin-left: 70px;
+}
+body> #board_number5{
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px;
+}
+body> #board_number5>.board5_1{
+    float: left;
+    margin-left: 44px;
+}
+body> #board_number5>.board5_2{
+    float: left;
+    margin-left: 104px;
+}
+body> #board_number5>.board5_3{
+    float: left;
+    margin-left: 440px;
+}
+body> #board_number5>.board5_4{
+    float: left;
+    margin-left: 64px;
+}
+body> #board_number6{
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px;
+}
+body> #board_number6>.board6_1{
+    float: left;
+    margin-left: 44px;
+}
+body> #board_number6>.board6_2{
+    float: left;
+    margin-left: 104px;
+}
+body> #board_number6>.board6_3{
+    float: left;
+    margin-left: 308px;
+}
+body> #board_number6>.board6_4{
+    float: left;
+    margin-left: 66px;
+}
+body> #board_number7{
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px;
+}
+body> #board_number7>.board7_1{
+    float: left;
+    margin-left: 44px;
+}
+body> #board_number7>.board7_2{
+    float: left;
+    margin-left: 104px;
+}
+body> #board_number7>.board7_3{
+    float: left;
+    margin-left: 526px;
+}
+body> #board_number7>.board7_4{
+    float: left;
+    margin-left: 66px;
+}
+body> #board_number8{
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px;
+}
+body> #board_number8>.board8_1{
+    float: left;
+    margin-left: 44px;
+}
+body> #board_number8>.board8_2{
+    float: left;
+    margin-left: 104px;
+}
+body> #board_number8>.board8_3{
+    float: left;
+    margin-left: 492px;
+}
+body> #board_number8>.board8_4{
+    float: left;
+    margin-left: 66px;
+}
+body> #board_number9{
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px;
+}
+body> #board_number9>.board9_1{
+    float: left;
+    margin-left: 44px;
+}
+body> #board_number9>.board9_2{
+    float: left;
+    margin-left: 104px;
+}
+body> #board_number9>.board9_3{
+    float: left;
+    margin-left: 440px;
+}
+body> #board_number9>.board9_4{
+    float: left;
+    margin-left: 66px;
+}
+body> #board_number10{
+    overflow: hidden;
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+body> #board_number10>.board10_1{
+    float: left;
+    margin-left: 44px;
+}
+body> #board_number10>.board10_2{
+    float: left;
+    margin-left: 104px;
+}
+body> #board_number10>.board10_3{
+    float: left;
+    margin-left: 472px;
+}
+body> #board_number10>.board10_4{
+    float: left;
+    margin-left: 66px;
+}
+
+* {
+            
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#sun_footer > .hr_1 > .board_hr{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    
+}
+.list_button {
+    overflow: hidden;
+    width: 406px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.list_button > .page {
+    float: left;
+    width: 34px;
+    height: 34px;
+    background: url(../img/section/sprite.png);
+    
+}
+.list_button > .page:last-child{
+    width: 66px;
+}
+.list_button > div.list1{background-position: 0 0;}
+.list_button > div.list2{background-position: -34px 0;}
+.list_button > div.list3{background-position: -68px 0;}
+.list_button > div.list4{background-position: -102px 0;}
+.list_button > div.list5{background-position: -136px 0;}
+.list_button > div.list6{background-position: -170px 0;}
+.list_button > div.list7{background-position: -204px 0;}
+.list_button > div.list8{background-position: -238px 0;}
+.list_button > div.list9{background-position: -272px 0;}
+.list_button > div.list10{background-position: -306px 0;}
+.list_button > div.list11{background-position: -340px 0;}
+
+.list_button > div.list1:active{background-position: 0 34px;}
+.list_button > div.list2:active{background-position: -34px 34px;}
+.list_button > div.list3:active{background-position: -68px 34px;}
+.list_button > div.list4:active{background-position: -102px 34px;}
+.list_button > div.list5:active{background-position: -136px 34px;}
+.list_button > div.list6:active{background-position: -170px 34px;}
+.list_button > div.list7:active{background-position: -204px 34px;}
+.list_button > div.list8:active{background-position: -238px 34px;}
+.list_button > div.list9:active{background-position: -272px 34px;}
+.list_button > div.list10:active{background-position: -306px 34px;}

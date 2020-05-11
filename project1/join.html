@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Beats Records 회원가입</title>
+    <link rel="stylesheet" href="./css/join.css">
+</head>
+<body>
+    <form>
+        <h2>회원정보</h2>
+        <p>
+            <label>이름 : <input name="name" placeholder="이름 입력"></label>
+        </p>
+    
+        <p>
+            <label>아이디 : <input name="id" placeholder="아이디 입력"></label>
+            <input type="submit" value="중복확인">
+        </p>
+            
+        <p>
+            <label>비밀번호 : <input name="pwd" type="password" placeholder="비밀번호 입력"></label>
+        </p>
+        <p>
+            <label>비밀번호 확인 : <input name="repwd" type="password" placeholder="비밀번호 확인"> </label>
+        </p>  
+            
+        <p>
+            <label>이메일 : <input name="email" type="email" placeholder="Ex)ds10123@naver.com"></label>
+        </p>
+    
+        <p>
+            <label>이메일 수신동의 : <input name="mailagree" type="radio" value="yes">동의 
+            <input name="mailagree" type="radio" value="no">비동의</label>
+        </p>   
+    
+        <p>
+            <label>전화번호 : 
+            <select name="phone">
+                <option value="1" selected>SKT</option> 
+                <option value="2" >KT</option>
+                <option value="3">LG</option>
+                <option value="4">알뜰요금</option>
+                </select>
+            <input name="number" placeholder="-빼고 숫자만 입력" required></label>
+        </p> 
+    
+        <p>
+            <label>정보이용 : <input type="checkbox" value="1" name="prv">개인정보이용
+            <input name="agree" type="checkbox" value="2" name="prv" checked>개인정보사용
+        </p>
+            <input name="agree"type="submit" value="가입"></label>
+        </form>
+</body>
+</html>
